@@ -1,8 +1,8 @@
-#include "Registration.h"
+#include "Log_Reg.h"
 
 
 int main(){
-    Registration registration{};
+    Log_Reg registration{};
     bool display_menu{true};
     while(display_menu){
         registration.display_menu();

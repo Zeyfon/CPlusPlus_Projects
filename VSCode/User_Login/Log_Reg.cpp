@@ -1,19 +1,19 @@
-#include "Registration.h"
+#include "Log_Reg.h"
 #include <iostream>
 #include <fstream>
 #include <string>
 
-void Registration::display_menu(){
+void Log_Reg::display_menu(){
     std::cout << "1: Register\n"<<std::endl; 
     std::cout << "2: Login\n"<<std::endl;
     std::cout << "Your choice\n"<<std::endl;
 }
-int Registration::get_menu_choice(){
+int Log_Reg::get_menu_choice(){
     int number;
     std::cin>>number;
     return number;
 }
-void Registration::register_user(){
+void Log_Reg::register_user(){
     std::string username, password;
     std::cout<<"Select a username: ";
     std::cin>> username;
@@ -30,7 +30,7 @@ void Registration::register_user(){
     file <<password <<std::endl;
     file.close();
 }
-bool Registration::login_user(){
+bool Log_Reg::login_user(){
     bool status = is_already_registered();
     if(!status){
         std::cout << "False Login!" << std::endl;
@@ -44,7 +44,7 @@ bool Registration::login_user(){
     }
 }
 
-bool Registration::is_already_registered(){
+bool Log_Reg::is_already_registered(){
     std::string username, password, un, pw;
 
     std::cout<< "Enter username: ";

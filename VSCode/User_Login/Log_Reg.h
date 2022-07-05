@@ -1,6 +1,6 @@
 
 
-class Registration {
+class Log_Reg {
     public:
         void display_menu();
         int get_menu_choice();
